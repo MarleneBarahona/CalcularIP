@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
 
         ip = findViewById(R.id.editText_ip);
         mascara = findViewById(R.id.editText_mask);
-        idnet = findViewById(R.id.edit_text_netid);
+        idnet = findViewById(R.id.editText_netid);
         broadcast = findViewById(R.id.edit_text_broad);
-        canip = findViewById(R.id.edit_text_canip);
-        parnet = findViewById(R.id.edit_text_netp);
-        parhost = findViewById(R.id.edit_text_hostp);
+        canip = findViewById(R.id.editText_canip);
+        parnet = findViewById(R.id.editText_netp);
+        parhost = findViewById(R.id.editText_hostp);
 
     }
 
@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     //Metodo para pasar el numero binario a IP
     public String longToIP(long ip){
         String st="";
@@ -72,17 +71,5 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return st;
-    }
-
-
-    public void reset(View v){
-        ip.setText("");
-        ip.requestFocus();
-        mascara.setText("");
-        idnet.setText("");
-        broadcast.setText("");
-        canip.setText("");
-        parnet.setText("");
-        parhost.setText("");
     }
 }

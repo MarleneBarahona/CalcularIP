@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">CalcularIP</string>
     <string name="text_slash">/</string>
+    <string name="text_ID">Direccion IP / Mascara</string>
+    <string name="text_mascara">Mascara</string>
     <string name="bttn_calcular">Calcular</string>
-    <string name="ID">Network ID</string>
+    <string name="netID">Network ID</string>
     <string name="text_broad">Broadcast</string>
     <string name="text_canh">Host disponibles</string>
     <string name="text_netp">Parte de red</string>
