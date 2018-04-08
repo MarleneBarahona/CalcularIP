@@ -6,8 +6,13 @@ import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-
-    EditText ip, mascara, idnet, broadcast, canip, parnet, parhost;
+    EditText ip;
+    EditText mascara;
+    EditText idnet;
+    EditText broadcast;
+    EditText canip;
+    EditText parnet;
+    EditText parhost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +28,12 @@ public class MainActivity extends AppCompatActivity {
         canip = findViewById(R.id.editText_canip);
         parnet = findViewById(R.id.editText_netp);
         parhost = findViewById(R.id.editText_hostp);
-
     }
 
     //Metodo para calcular
     public void calcular(View v){
         //Cadena que separa la string por punto
-        String[] ip_separada = ip.getText().toString().split("\\.");
+        String[] ip_octetos = ip.getText().toString().split("\\.");
 
         //variables para los calculos.
         long rip =0;
@@ -38,11 +42,11 @@ public class MainActivity extends AppCompatActivity {
         int mascaraint = Integer.parseInt(mascara.getText().toString());
 
         //validar que tenga todos los octetos
-        if(ip_separada.length != 4) return;
+        if(ip_octetos.length != 4) return;
 
         //ip binaria
         for(int i=3; i>=0; i--) {
-            rip |= (Long.parseLong(ip_separada[3-i])) << (i*8);
+            rip |= (Long.parseLong(ip_octetos[3-i])) << (i*8);
         }
 
         //mascara binaria
